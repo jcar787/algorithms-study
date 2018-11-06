@@ -1,7 +1,6 @@
 /*
-    How do you find the missing number in a given integer array of 1 to 100?
+    How do you find the duplicate number on a given integer array?
 */
-
 const generateArray = (length = 100) => {
   const result = [];
   for (let i = 1; i <= length; i++) {
@@ -14,16 +13,18 @@ const getRandomIndex = (length = 100) => {
   return Math.floor(Math.random() * length);
 };
 
-const findMissingNumber = arr => {
+const findDuplicateNumber = arr => {
   const arrSum = arr.reduce((acum, el) => acum + el, 0);
   const totalSum = generateArray().reduce((acum, el) => acum + el, 0);
-  return totalSum - arrSum;
+  return arrSum - totalSum;
 };
+
 const ranIndex = getRandomIndex();
 const arrayNumbers = generateArray();
 const testArray = [
   ...arrayNumbers.slice(0, ranIndex),
-  ...arrayNumbers.slice(ranIndex + 1)
+  ...arrayNumbers.slice(ranIndex - 1)
 ];
-
-console.log(findMissingNumber(testArray));
+console.log(ranIndex);
+console.log(testArray.join(', '));
+console.log(findDuplicateNumber(testArray));
