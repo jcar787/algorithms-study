@@ -3,7 +3,7 @@ const findPairs = require('../findPairs');
 
 describe('Find Pairs', () => {
   let array = [];
-  beforeAll(() => {
+  beforeEach(() => {
     array = generateRandomArray();
   });
 

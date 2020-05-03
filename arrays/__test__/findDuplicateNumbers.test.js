@@ -3,7 +3,7 @@ const findDuplicateNumbers = require('../findDuplicateNumbers');
 
 describe('Find duplicate numbers', () => {
   let array = [];
-  beforeAll(() => {
+  beforeEach(() => {
     array = generateArray();
     array = shuffle(array.concat([2, 4, 6, 8]));
   });

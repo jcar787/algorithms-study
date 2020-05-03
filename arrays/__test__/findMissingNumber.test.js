@@ -4,7 +4,7 @@ const findMissingNumber = require('../findMissingNumber');
 describe('Find the missing number', () => {
   let array = [];
 
-  beforeAll(() => {
+  beforeEach(() => {
     array = generateArray();
   });
 

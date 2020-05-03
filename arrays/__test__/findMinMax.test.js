@@ -3,7 +3,7 @@ const findMinMax = require('../findMinMax');
 
 describe('Find mix and max numbers', () => {
   let array = [];
-  beforeAll(() => {
+  beforeEach(() => {
     array = generateArray();
   });
 

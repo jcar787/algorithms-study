@@ -9,7 +9,7 @@ const findDuplicateNumber = require('../findDuplicateNumber');
 describe('Find duplicate number', () => {
   let array = [];
 
-  beforeAll(() => {
+  beforeEach(() => {
     array = generateArray();
   });
 
